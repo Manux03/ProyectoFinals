@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="nombreTaller">ServiExpress</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="menuUsuario"id="container">
+    <ionic-title>
+      <div class="atras">
+        <ion-button (click)="backtoInicio()" size="small"><--</ion-button>
+      </div>
+      <div class="menuTitulo">
+        <h1>Menu</h1>
+      </div>
+      <p class="nombreUsuario ">{{mensaje}}</p>
+    </ionic-title>
+    <div class="opcionesUsuario">
+      <div>
+        <ion-button color="success"(click)="gotoServicios()">Servicios</ion-button>
+      </div>
+           
+    </div>
+  </div>
+</ion-content>
+
+
+

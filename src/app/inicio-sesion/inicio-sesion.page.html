@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="nombreTaller">ServiExpress</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="inicioSesion"id="container">
+    <ionic-title>
+      <h1>Inicio Sesion</h1>
+    </ionic-title>
+    <div class="componentesInicio">
+      <ion-item>
+        <ion-label  position="stacked">Usuario</ion-label>
+        <ion-input [(ngModel)]="nombreUsuario"class="nombreUsuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </div>
+    <div class="botonesInicio">
+      <ion-button expand="block" (click)="goToMenu()">Iniciar</ion-button>
+      <ion-button color="danger "expand="block">Cancelar</ion-button>
+    </div>
+  </div>
+</ion-content>

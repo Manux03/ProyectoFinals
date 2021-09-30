@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ServiExpress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container-servicios">
+  <div class="Servicios"id="container">
+    <ionic-title>
+      <div class="atras">
+        <ion-button (click)="backtomenu()" size="small"><--</ion-button>
+      </div>
+      <div class="opcionesUsuario">
+        <div>
+          <ion-button color="success" (click)="goToAgendarHora()">Agenda tu hora</ion-button>
+        </div>
+      </div>
+      <div class="menuServicios">
+        <h1>Servicios</h1>
+      </div>
+      <p class="nombreUsuario ">Nombre Usuario</p>
+    </ionic-title>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Mecanica General</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/imagen1.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          El servicio de mecanica general realiza un chequeo rapido de todos los componentes del vehiculo..
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Montaje de venta y montaje de llantas</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/imagen2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          El servicio de montaje de llantas se encarga de colocar y ajustar los componentes de neumatica del vehiculo.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Hojalateria y pintura automotriz</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/imagen3.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          El servicio de hojalateria y pintura automotriz se encarga de volver a restaurar tu vehiculo para que vuelva a sonreir.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ion-content>
