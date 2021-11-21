@@ -1,4 +1,15 @@
-container {
+ion-content {
+  --ion-background-color: #eeeeee;
+}
+
+ion-header{
+  --ion-background-color: #c80120;
+}
+ion-title{
+  color: white;
+}
+
+#container {
     text-align: center;
   
     position: absolute;

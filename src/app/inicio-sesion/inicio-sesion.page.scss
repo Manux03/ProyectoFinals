@@ -1,9 +1,12 @@
 ion-content {
-  --ion-background-color: #f8575d;
+  --ion-background-color: #eeeeee;
 }
 
 ion-header{
-  --ion-background-color: #EEE5E9;
+  --ion-background-color: #c80120;
+}
+ion-title{
+  color: white;
 }
 #container {
     text-align: center;
@@ -24,8 +27,6 @@ ion-header{
     font-size: 16px;
     line-height: 22px;
   
-    color: #8c8c8c;
-  
     margin: 0;
   }
   
@@ -35,4 +36,8 @@ ion-header{
 
   .nombreTaller{
     text-align: center;
+  }
+ 
+  .cancelar{
+    --background: #d20020;
   }

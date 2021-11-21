@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: '',
     component: ServiciosPage
-  },  {
+  },
+  {
     path: 'reserva-hora',
     loadChildren: () => import('./reserva-hora/reserva-hora.module').then( m => m.ReservaHoraPageModule)
   }
