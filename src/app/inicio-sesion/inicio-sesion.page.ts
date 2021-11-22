@@ -25,17 +25,20 @@ export class InicioSesionPage implements OnInit {
 
       var resultadoString = JSON.stringify(resultado);
       var usuarios = JSON.parse(resultadoString);
+
       for(let u in usuarios.Users){
-        if((usuarios.Users[u].nombreUsuario == this.nombreUsuario)){
-          if(usuarios.Users[u].password = this.passUsuario){
-            let navigationExtras:NavigationExtras = {
-              queryParams:{
-                  mensaje: this.nombreUsuario
+        if(usuarios.Users[u].nombreUsuario == this.nombreUsuario){
+          if(usuarios.Users[u].password == this.passUsuario){
+              let navigationExtras:NavigationExtras = {
+                queryParams:{
+                    mensaje: this.nombreUsuario
+                }
               }
-            }
-            this.router.navigate(['/menu'],navigationExtras)
-            console.log("conexion");
+              this.router.navigate(['/menu'],navigationExtras)
+              console.log("conexion");
           }else{
+            
+            this.alertaError = "Contraseña Incorrecta"
             console.log("error pass");
           }
           break;
