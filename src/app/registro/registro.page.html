@@ -6,8 +6,7 @@
 <ion-content [fullscreen]="true" class= "Fondo">
   <div class="inicioSesion"id="container">
     <ionic-title>
-      <img mat-card-image src="assets/img/tire.png" alt="Photo of a Shiba Inu">
-      <h1>Inicio Sesion</h1>
+      <h1>Registro Usuario</h1>
     </ionic-title>
     <div class="componentesInicio">
       <ion-item>
@@ -20,13 +19,10 @@
       </ion-item>
     </div>
     <div class="botonesInicio">
-      <ion-button class = "Iniciar" expand="block" (click)="goToMenu()">Iniciar</ion-button>
+      <ion-button class = "Iniciar" expand="block">Registrar</ion-button>
     </div>
     <div class="botoncancelar">
-      <ion-button class="cancelar" expand="block">Cancelar</ion-button>
-    </div>
-    <div class="botonesInicio2">
-      <ion-button expand="block" (click)="buscarUsuario()">prueba</ion-button>
+      <ion-button class="cancelar" expand="block" (click)="gotoInicio()">Cancelar</ion-button>
     </div>
   </div>
 </ion-content>

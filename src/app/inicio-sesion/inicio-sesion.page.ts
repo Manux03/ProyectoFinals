@@ -19,6 +19,10 @@ export class InicioSesionPage implements OnInit {
 
   constructor(private router:Router,private animationCtrl:AnimationController,public api:APIService) { }
   
+  gotoRegistro(){
+    this.router.navigate(['/registro'])
+
+  }
 
   buscarUsuario(){
     this.api.getUsuarios().subscribe(resultado => {

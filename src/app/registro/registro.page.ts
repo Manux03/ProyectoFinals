@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  gotoInicio(){
+    this.router.navigate(['/inicio-sesion'])
+
+  }
 
   ngOnInit() {
   }
