@@ -15,27 +15,10 @@ export class InicioSesionPage implements OnInit {
   public email:any;
   public contraseña:any;
   public idUsuario:any;
+  alertaError: any;
 
   constructor(private router:Router,private animationCtrl:AnimationController,public api:APIService) { }
-  goToMenu(){
-    if(this.nombreUsuario == null){
-      let navigationExtras:NavigationExtras = {
-        queryParams:{
-            mensaje: '-----'
-        }
-      }
-      this.router.navigate(['/menu'],navigationExtras)
-
-    }else{
-    let navigationExtras:NavigationExtras = {
-      queryParams:{
-          mensaje: this.nombreUsuario
-      }
-    }
-    this.router.navigate(['/menu'],navigationExtras)
-    }
-
-  }
+  
 
   buscarUsuario(){
     this.api.getUsuarios().subscribe(resultado => {
@@ -45,6 +28,12 @@ export class InicioSesionPage implements OnInit {
       for(let u in usuarios.Users){
         if((usuarios.Users[u].nombreUsuario == this.nombreUsuario)){
           if(usuarios.Users[u].password = this.passUsuario){
+            let navigationExtras:NavigationExtras = {
+              queryParams:{
+                  mensaje: this.nombreUsuario
+              }
+            }
+            this.router.navigate(['/menu'],navigationExtras)
             console.log("conexion");
           }else{
             console.log("error pass");

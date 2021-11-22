@@ -11,22 +11,20 @@
     </ionic-title>
     <div class="componentesInicio">
       <ion-item>
+        <p class="alertaError ">{{alerta}}</p>
         <ion-label  position="stacked">Usuario</ion-label>
         <ion-input [(ngModel)]="nombreUsuario"class="nombreUsuario"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Contraseña</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input [(ngModel)]="passUsuario" class="passUsuario"type="password"></ion-input>
       </ion-item>
     </div>
     <div class="botonesInicio">
-      <ion-button class = "Iniciar" expand="block" (click)="goToMenu()">Iniciar</ion-button>
+      <ion-button class = "Iniciar" expand="block" (click)="buscarUsuario()">Iniciar</ion-button>
     </div>
     <div class="botoncancelar">
       <ion-button class="cancelar" expand="block">Cancelar</ion-button>
-    </div>
-    <div class="botonesInicio2">
-      <ion-button expand="block" (click)="buscarUsuario()">prueba</ion-button>
     </div>
   </div>
 </ion-content>
