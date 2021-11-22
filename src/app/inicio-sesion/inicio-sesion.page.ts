@@ -35,16 +35,12 @@ export class InicioSesionPage implements OnInit {
                 }
               }
               this.router.navigate(['/menu'],navigationExtras)
-              console.log("conexion");
           }else{
             
-            this.alertaError = "Contraseña Incorrecta"
-            console.log("error pass");
+            this.alertaError = "Contraseña Incorrecta";
           }
-          break;
         }else{
-          console.log("usuarios no encontrado");
-          break;
+          this.alertaError = "Usuario No encontrado";
         }
       }
 
