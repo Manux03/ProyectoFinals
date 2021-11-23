@@ -12,21 +12,27 @@
       </div>
       <div class="opcionesUsuario">
         <div class="componentesInicio">
-          <ion-item>
-            <p class="alertaError ">{{alertaError}}</p>
-            <ion-label  position="stacked">Usuario</ion-label>
+          <div>
+            <p>Ingresa el nombre de usuario que quieres editar</p>
+            <ion-label  position="stacked">Nombre de Usuario</ion-label>
             <ion-input [(ngModel)]="nombreUsuario"class="nombreUsuario"></ion-input>
+            
+          </div>
+          <ion-item>
+            
+            <ion-label  position="stacked">Email</ion-label>
+            <ion-input [(ngModel)]="email"class="email"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Contraseña</ion-label>
-            <ion-input [(ngModel)]="passUsuario" class="passUsuario"type="password"></ion-input>
+            <ion-input [(ngModel)]="password" class="passUsuario"type="password"></ion-input>
           </ion-item>
         </div>
         <div>
-          <ion-button color="success" (click)="goToAgendarHora()">Modificar Usuario/Contraseña</ion-button>
+          <ion-button color="success" (click)="modificarUser()">Modificar Usuario/Contraseña</ion-button>
         </div>
         <div>
-          <ion-button color="success" (click)="goToAgendarHora()">Eliminar Usuario</ion-button>
+          <ion-button color="success" (click)="eliminarUser()">Eliminar Usuario</ion-button>
         </div>
       </div>
     </ionic-title>

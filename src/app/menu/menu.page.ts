@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
+import { NavigationExtras} from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { AnimationController } from '@ionic/angular';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-
+  nombreUsuario: any;
   mensaje: any;
   
   constructor(private router:Router,private route: ActivatedRoute, private animationCtrl:AnimationController) 
@@ -31,6 +32,7 @@ export class MenuPage implements OnInit {
   }
 
   gotoModificar(){
+    
     this.router.navigate(['/editar'])
 
   }
@@ -38,18 +40,7 @@ export class MenuPage implements OnInit {
     this.router.navigate(['/inicio-sesion'])
 
   }
-  ngAfterViewInit(){
-    const animation = this.animationCtrl.create().
-    addElement(document.querySelector('.nombreTaller'))
-    .duration(2000)
-    .iterations(Infinity)
-    .keyframes([
-    { offset: 0, transform: 'scale(1)' },
-    { offset: 0.5, transform: 'scale(1.5)' },
-    { offset: 1, transform: 'scale(1)' }
-    ]);
-    animation.play() 
-  }
+
   
   ngOnInit() {
   }

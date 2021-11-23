@@ -14,5 +14,12 @@ export class APIService {
   getUsuarios(){
     return this.http.get(this.apiURL)
   }
+
+  getUsuario(idUsuario){
+    return this.http.get(`${this.apiURL}${idUsuario}`)
+  }
    
+  deleteUsuario(idUsuario){
+    return this.http.delete(`${this.apiURL}${idUsuario}`)
+  }
 }

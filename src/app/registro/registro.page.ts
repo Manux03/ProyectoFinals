@@ -21,9 +21,9 @@ export class RegistroPage implements OnInit {
     this.http.post("http://127.0.0.1:8000/api/usuarios/",this.users).subscribe((res: any)=>{
       this.router.navigate(['/inicio-sesion'])
     })
+  }
 
   
- }
   ngOnInit() {
   }
 
