@@ -30,6 +30,10 @@ export class MenuPage implements OnInit {
 
   }
 
+  gotoModificar(){
+    this.router.navigate(['/editar'])
+
+  }
   backtoInicio(){
     this.router.navigate(['/inicio-sesion'])
 

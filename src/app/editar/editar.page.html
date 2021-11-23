@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ServiExpress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container-servicios">
+  <div class="Servicios"id="container">
+    <ionic-title>
+      <div class="atras">
+        <ion-button (click)="backtomenu()" size="small"><--</ion-button>
+      </div>
+      <div class="opcionesUsuario">
+        <div class="componentesInicio">
+          <ion-item>
+            <p class="alertaError ">{{alertaError}}</p>
+            <ion-label  position="stacked">Usuario</ion-label>
+            <ion-input [(ngModel)]="nombreUsuario"class="nombreUsuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input [(ngModel)]="passUsuario" class="passUsuario"type="password"></ion-input>
+          </ion-item>
+        </div>
+        <div>
+          <ion-button color="success" (click)="goToAgendarHora()">Modificar Usuario/Contraseña</ion-button>
+        </div>
+        <div>
+          <ion-button color="success" (click)="goToAgendarHora()">Eliminar Usuario</ion-button>
+        </div>
+      </div>
+    </ionic-title>
+  </div>
+</ion-content>
